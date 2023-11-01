@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "mv sonata-api.d.ts api; mv waltz-ui.d.ts web"
   },
   "keywords": [],
   "author": "",
