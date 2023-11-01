@@ -1,0 +1,23 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "NODE_PATH=./node_modules npx waltz-build -m serve",
+    "build": "NODE_PATH=./node_modules npx waltz-build -m build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@waltz-ui/i18n-ptbr": "^0.0.2",
+    "waltz-tailwind-layout": "^0.0.32",
+    "waltz-ui": "^0.0.30"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx sonata-build -m pipeline",
+    "compile": "npx sonata-build -m compile",
+    "compile:run": "npm run compile && node --preserve-symlinks dist/index.js",
+    "serve": "nodemon --ext ts --ignore 'dist/**/*' --exec \"npm run compile:run\"",
+    "start": "node ./release/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sonata-api": "^0.0.17"
+  },
+  "devDependencies": {
+    "sonata-build": "^0.0.11"
+  }
+}
