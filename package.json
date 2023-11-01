@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "mv sonata-api.d.ts api; mv waltz-ui.d.ts web"
+    "postinstall": "bash -c 'mv sonata-api.d.ts api; mv waltz-ui.d.ts web'"
   },
   "keywords": [],
   "author": "",

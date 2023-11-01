@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "NODE_PATH=./node_modules npx waltz-build -m serve",
+    "serve": "bash -c 'NODE_PATH=./node_modules npx waltz-build -m serve'",
     "build": "NODE_PATH=./node_modules npx waltz-build -m build"
   },
   "keywords": [],
