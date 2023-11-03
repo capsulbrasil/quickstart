@@ -1,27 +1,26 @@
 import { defineDescription } from 'sonata-api'
 
-export const [Evento, description] = defineDescription({
-  $id: 'eventos',
+export const [Event, description] = defineDescription({
+  $id: 'event',
   icon: 'calendar-alt',
   properties: {
-    tipo:{
+    type:{
       enum: ["Rodízio", "Promoção"],
-      default: "Promoção"
     },
-    data_de_inicio:{
+    start_date:{
       type: 'string',
       format: 'date-time'
     },
-    data_de_termino:{
+    end_date:{
       type: 'string',
       format: 'date-time'
     },
-    descontos:{
+    discounts:{
       type: 'array',
       items: {
         type: 'object',
         properties: {
-          tamanhos: {
+          sizes: {
             enum: [
               'Família',
               'Grande',
@@ -40,12 +39,13 @@ export const [Evento, description] = defineDescription({
   presets: [
     'crud'
   ],
+  required: ["type", "start_date", "end_date"],
   formLayout:{
     fields: {
-      descontos: {
+      discounts: {
         if: {
           operator: 'equal',
-          term1: 'tipo',
+          term1: 'type',
           term2: 'Promoção'
         },
       },

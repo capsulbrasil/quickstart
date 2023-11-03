@@ -1,5 +1,5 @@
 export * from './pizza'
-export * from './mesas'
-export * from './funcionarios'
-export * from './eventos'
+export * from './table'
+export * from './employee'
+export * from './event'
 

@@ -1,10 +1,10 @@
 import { defineCollection, useFunctions } from 'sonata-api'
-import { Evento, description } from './description';
+import { Event, description } from './description';
 
-export const eventos = defineCollection(() => ({
-  item: Evento,
+export const event = defineCollection(() => ({
+  item: Event,
   description,
-  functions: useFunctions<typeof Evento>()([
+  functions: useFunctions<typeof Event>()([
     'get',
     'getAll',
     'insert',

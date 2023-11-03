@@ -1,19 +1,19 @@
 import { defineDescription } from 'sonata-api'
 
-export const [Funcionario, description] = defineDescription({
-  $id: 'funcionarios',
+export const [Employee, description] = defineDescription({
+  $id: 'employee',
   icon: 'head-side',
   properties: {
-    nome: {
+    name: {
         type: 'string',
     },
-    cargo:{
+    role:{
       enum: ["Garçom", "Chef", "Caixista", "Limpeza", "Gerente"],
     },
-    turno:{
+    shift:{
       enum: ["Manhã-Tarde", "Tarde-Noite"],
     },
-    data_de_admissao:{
+    admission_date:{
       type: 'string',
       format: 'date'
     }

@@ -1,10 +1,10 @@
 import { defineCollection, useFunctions } from 'sonata-api'
-import { Table, description } from './description';
+import { Employee, description } from './description';
 
-export const mesas = defineCollection(() => ({
-  item: Table,
+export const employee = defineCollection(() => ({
+  item: Employee,
   description,
-  functions: useFunctions<typeof Table>()([
+  functions: useFunctions<typeof Employee>()([
     'get',
     'getAll',
     'insert',

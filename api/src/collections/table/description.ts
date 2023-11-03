@@ -1,10 +1,10 @@
 import { defineDescription } from 'sonata-api'
 
 export const [Table, description] = defineDescription({
-  $id: 'mesas',
+  $id: 'table',
   icon: 'table',
   properties: {
-    numero: {
+    number: {
         type: 'number',
         maximum: 30,
         minimum: 0,
@@ -14,14 +14,14 @@ export const [Table, description] = defineDescription({
     vip:{
       type:'boolean'
     },
-    reservado:{
+    reserved:{
       type:'boolean',
       default: false
     },
-    caracteristica:{
+    characteristic:{
       enum: ["Vista Panorâmica", "Vista da Janela", "Mesa do Chef", "Para Eventos Especiais"],
     },
-    reservado_por:{
+    reserved_by:{
       type: 'string',
       maxLength: 100,
       default: 'Não Reservado',
@@ -31,13 +31,14 @@ export const [Table, description] = defineDescription({
   presets: [
     'crud'
   ],
-  immutable: ["reservado_por"],
+  required: ["number", "characteristic"],
+  immutable: ["reserved_by"],
   formLayout:{
     fields: {
-      reservado_por: {
+      reserved_by: {
         if: {
           operator: 'equal',
-          term1: 'reservado',
+          term1: 'reserved',
           term2: true
         },
       

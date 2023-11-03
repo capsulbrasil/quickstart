@@ -27,9 +27,9 @@ const options = defineOptions({
       },
       children: [
         '/dashboard/pizza',
-        '/dashboard/mesas',
-        '/dashboard/funcionarios',
-        '/dashboard/eventos',
+        '/dashboard/table',
+        '/dashboard/employee',
+        '/dashboard/event',
         '/dashboard/user'
       ]
     }
