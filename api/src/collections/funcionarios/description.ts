@@ -1,7 +1,7 @@
 import { defineDescription } from 'sonata-api'
 
-export const [Equipe, description] = defineDescription({
-  $id: 'equipe',
+export const [Funcionario, description] = defineDescription({
+  $id: 'funcionarios',
   icon: 'head-side',
   properties: {
     nome: {
