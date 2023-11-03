@@ -8,13 +8,33 @@ export const [Evento, description] = defineDescription({
       enum: ["Rodízio", "Promoção"],
       default: "Promoção"
     },
-    data:{
+    data_de_inicio:{
       type: 'string',
       format: 'date-time'
     },
-    desconto:{
-      type: 'number',
-      maximum: 100
+    data_de_termino:{
+      type: 'string',
+      format: 'date-time'
+    },
+    descontos:{
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          tamanhos: {
+            enum: [
+              'Família',
+              'Grande',
+              'Média',
+            ]
+          },
+          percentage: {
+            type: 'number',
+            minimum: 0,
+            maximum: 100
+          }
+        }
+      }
     },
   },
   presets: [
@@ -22,14 +42,13 @@ export const [Evento, description] = defineDescription({
   ],
   formLayout:{
     fields: {
-      desconto: {
+      descontos: {
         if: {
           operator: 'equal',
           term1: 'tipo',
           term2: 'Promoção'
         },
-      
-      }
+      },
     }
   }
 })
