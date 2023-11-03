@@ -2,7 +2,7 @@ import { collections, init, makeRouter } from 'sonata-api'
 export * as collections from './collections'
 
 const router = makeRouter();
-const daysInMiliseconds: number = 86400000;
+const daysInMiliseconds = 86400000;
 
 router.GET('/get-unreserved-tables', (context) => {
 
@@ -33,7 +33,7 @@ router.GET('/get-events-in-next_days', (context) => {
   if(days <= 0)
     return { message: "Invalid query." };
 
-  const maxDate: Date = new Date(Date.now() + days * daysInMiliseconds);
+  const maxDate = new Date(Date.now() + days * daysInMiliseconds);
 
   const result = context.models.event.find({
     start_date: {
