@@ -1,5 +1,5 @@
 import { useApp, userRoutes, dashboardRoutes, defineOptions, WMain } from 'waltz-ui'
-import { DashboardLayout, AuthWall } from 'waltz-tailwind-layout'
+import { DashboardLayout, AuthWall } from 'aeria-app-layout'
 import waltzPtbr from '@waltz-ui/i18n-ptbr'
 
 import '@waltz-ui/ui/style.css'
