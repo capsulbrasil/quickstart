@@ -1,11 +1,13 @@
 import { useApp, userRoutes, dashboardRoutes, defineOptions, AeriaMain } from 'waltz-ui'
-import { DashboardLayout, AuthWall } from 'aeria-app-layout'
 import waltzPtbr from '@waltz-ui/i18n-ptbr'
 
 import '@waltz-ui/ui/style.css'
 import 'aeria-app-layout/style.css'
 import './style/main.css'
 import './style/main.less'
+
+import { AuthWall } from 'aeria-app-layout'
+import DashboardLayout from './pages/_dashboard.vue'
 
 const options = defineOptions({
   component: AeriaMain,

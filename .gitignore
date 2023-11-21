@@ -6,6 +6,8 @@ api/.env
 api/production.env
 api/release
 api/dist
-api/*.d.ts
 web/dist
+
+# you may remove these
+api/*.d.ts
 web/*.d.ts
