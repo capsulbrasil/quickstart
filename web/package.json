@@ -11,13 +11,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@waltz-ui/i18n-ptbr": "^0.0.2",
+    "@waltz-ui/i18n-ptbr": "latest",
     "aeria-app-layout": "latest",
-    "waltz-ui": "^0.0.30"
+    "waltz-ui": "latest"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.31",
-    "tailwindcss": "^3.3.5"
+    "tailwindcss": "^3.3.5",
+    "waltz-build": "latest"
   }
 }

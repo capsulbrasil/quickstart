@@ -1,13 +1,14 @@
-import { useApp, userRoutes, dashboardRoutes, defineOptions, WMain } from 'waltz-ui'
+import { useApp, userRoutes, dashboardRoutes, defineOptions, AeriaMain } from 'waltz-ui'
 import { DashboardLayout, AuthWall } from 'aeria-app-layout'
 import waltzPtbr from '@waltz-ui/i18n-ptbr'
 
 import '@waltz-ui/ui/style.css'
-import 'waltz-tailwind-layout/style.css'
-import '../static/main.css'
+import 'aeria-app-layout/style.css'
+import './style/main.css'
+import './style/main.less'
 
 const options = defineOptions({
-  component: WMain,
+  component: AeriaMain,
   dashboardComponent: DashboardLayout,
   routes: [
     userRoutes(() => AuthWall),
@@ -19,18 +20,11 @@ const options = defineOptions({
       pt_BR: waltzPtbr
     }
   },
-  menuSchema: {
-    start: {
-      meta: {
-        title: 'Início',
-        icon: 'home'
-      },
-      children: [
-        '/dashboard/pizza',
-        '/dashboard/user'
-      ]
-    }
-  }
+  menuSchema: [
+    '/dashboard/pizza',
+    '/dashboard/user'
+
+  ]
 })
 
 useApp(options).then((app) => {
