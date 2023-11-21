@@ -47,12 +47,8 @@ export const [Pizza, description] = defineDescription({
     fields: {
       name: {
         if: {
-          operator: 'notin',
-          term1: '_id',
-          term2: [
-            null,
-            undefined
-          ]
+          operator: 'exists',
+          term1: '_id'
         }
       }
     }
