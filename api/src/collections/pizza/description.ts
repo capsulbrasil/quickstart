@@ -31,7 +31,7 @@ export const [Pizza, description] = defineDescription({
     },
     name: {
       type: 'string',
-      s$getter: (value: any) => {
+      getter: (value: any) => {
         const suffix = value.ingredients[1]
           ? value.ingredients[1].name
           : 'à moda'
