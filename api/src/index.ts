@@ -5,7 +5,7 @@ const router = makeRouter()
 
 router.GET('/hello-world', (_context) => {
   return {
-    message: 'Hello, world!'
+    message: 'Hello, world!',
   }
 })
 

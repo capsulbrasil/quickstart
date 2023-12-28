@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "mv sonata-api.d.ts api; mv waltz-ui.d.ts web"
+    "postinstall": "mv sonata-api.d.ts api; mv waltz-ui.d.ts web",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +16,10 @@
     "web/"
   ],
   "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "eslint-config-aeria": "latest",
+    "husky": "^8.0.3",
     "nodemon": "^3.0.1",
     "typescript": "^5.2.2"
   }

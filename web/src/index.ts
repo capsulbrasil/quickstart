@@ -1,5 +1,6 @@
 import { useApp, userRoutes, dashboardRoutes, defineOptions, AeriaMain } from 'waltz-ui'
 import waltzPtbr from '@waltz-ui/i18n-ptbr'
+import { ptbr } from './i18n'
 
 import '@waltz-ui/ui/style.css'
 import 'aeria-app-layout/style.css'
@@ -13,20 +14,23 @@ const options = defineOptions({
   component: AeriaMain,
   dashboardComponent: DashboardLayout,
   routes: [
-    userRoutes(() => AuthWall),
-    dashboardRoutes(() => DashboardLayout),
+    userRoutes(AuthWall),
+    dashboardRoutes(DashboardLayout),
   ],
   i18n: {
-    locale: 'pt_BR',
-    messages: {
-      pt_BR: waltzPtbr
-    }
+    current: 'pt_BR',
+    locales: {
+      pt_BR: [
+        waltzPtbr,
+        ptbr,
+      ],
+    },
   },
   menuSchema: [
     '/dashboard/pizza',
-    '/dashboard/user'
+    '/dashboard/user',
 
-  ]
+  ],
 })
 
 useApp(options).then((app) => {
