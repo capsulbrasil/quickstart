@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "husky install; test -f sonata-api.d.ts && (mv sonata-api.d.ts api; mv waltz-ui.d.ts web) || true",
+    "postinstall": "git init && husky install; test -f sonata-api.d.ts && (mv sonata-api.d.ts api; mv waltz-ui.d.ts web) || true",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "dev": "dualist api web"
