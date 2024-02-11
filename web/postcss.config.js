@@ -1,14 +1,11 @@
-module.exports = {
+export default {
   plugins: {
-    autoprefixer: {
-    },
+    autoprefixer: {},
     tailwindcss: {
       config: {
         prefix: 'tw-',
         darkMode: 'class',
-        content: [
-          './**/*.vue',
-        ],
+        content: ['./**/*.vue'],
       },
     },
   },

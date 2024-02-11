@@ -2,12 +2,11 @@
   "name": "api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "npx sonata-build -m pipeline",
-    "compile": "npx sonata-build -m compile",
-    "compile:run": "npm run compile && node --preserve-symlinks dist/index.js",
-    "serve": "nodemon --ext ts --ignore 'dist/**/*' --exec \"npm run compile:run\"",
+    "build": "NODE_PATH=../node_modules sonata-build",
+    "dev": "NODE_PATH=../node_modules sonata-build -w",
     "start": "node ./release/index.js"
   },
   "keywords": [],

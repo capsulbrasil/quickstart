@@ -3,9 +3,13 @@ import { defineCollection, get, getAll, insert, remove } from 'sonata-api'
 export const pizza = defineCollection({
   description: {
     $id: 'pizza',
-    icon: 'user',
+    icon: 'pizza',
+    required: ['name'],
     properties: {
       price: {
+        type: 'number',
+      },
+      rating: {
         type: 'number',
       },
       ingredients: {
@@ -31,7 +35,6 @@ export const pizza = defineCollection({
         },
       },
       name: {
-        type: 'string',
         getter: (value: any) => {
           const suffix = value.ingredients[1]
             ? value.ingredients[1].name
@@ -41,14 +44,12 @@ export const pizza = defineCollection({
         },
       },
     },
-    presets: [
-      'crud',
-    ],
+    presets: ['crud'],
     formLayout: {
       fields: {
         name: {
           if: {
-            operator: 'exists',
+            operator: 'truthy',
             term1: '_id',
           },
         },
