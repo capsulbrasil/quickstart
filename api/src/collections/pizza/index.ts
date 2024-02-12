@@ -7,16 +7,16 @@ export const pizza = defineCollection({
     required: ['name'],
     properties: {
       name: {
-        type: 'string'
+        type: 'string',
       },
       price: {
-        type: 'number'
+        type: 'number',
       },
       rating: {
         type: 'integer',
         minimum: 1,
-        maximum: 5
-      }
+        maximum: 5,
+      },
     },
     presets: ['crud'],
   },
