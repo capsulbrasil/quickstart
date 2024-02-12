@@ -2,9 +2,8 @@
   "name": "quickstart",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "postinstall": "git init && husky install; node scripts/postinstall.js",
+    "postinstall": "git init && husky && node scripts/postinstall.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "dev": "dualist api web"
@@ -21,7 +20,9 @@
     "@commitlint/config-conventional": "^18.4.3",
     "dualist": "latest",
     "eslint-config-aeria": "latest",
-    "husky": "^8.0.3",
     "typescript": "^5.4.0-beta"
+  },
+  "dependencies": {
+    "husky": "^9.0.10"
   }
 }
