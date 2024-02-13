@@ -7,6 +7,7 @@ router.group('/pizza', pizzaRoutes)
 
 export default init({
   config: {
+    apiUrl: process.env.API_URL,
     secret: process.env.APPLICATION_SECRET,
     database: {
       mongodbUrl: process.env.MONGODB_URL,
