@@ -5,9 +5,9 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "NODE_PATH=../node_modules sonata-build",
-    "dev": "NODE_PATH=../node_modules sonata-build -w",
-    "start": "node ./release/index.js"
+    "build": "sonata-build",
+    "dev": "sonata-build -w",
+    "start": "node -r sonata-api/loader ./release/index.js"
   },
   "keywords": [],
   "author": "",
