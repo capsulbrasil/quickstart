@@ -3,6 +3,7 @@ export * from './pizza'
 export {
   user,
   file,
+  tempFile,
   log,
   resourceUsage,
 
