@@ -1,13 +1,5 @@
 dist
 node_modules
-release.tar.gz
-etc/crontabs/root
 api/.env
-api/production.env
+api/*.env
 api/release
-api/dist
-web/dist
-
-# you may remove these
-api/*.d.ts
-web/*.d.ts
