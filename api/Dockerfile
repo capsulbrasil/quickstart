@@ -1,8 +1,5 @@
 FROM node:20
 
-ARG MONGODB_URL
-ENV MONGODB_URL $MONGODB_URL
-
 WORKDIR /opt/application/api
 COPY . .
 

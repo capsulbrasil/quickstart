@@ -7,25 +7,18 @@ services:
     volumes:
       - /tmp/mongodb-test:/data/db
       - api-build:/opt/application/api-build
-    ports:
-      - 27017:27017
     logging:
       driver: none
-    network_mode: host
 
   api:
     build:
       context: api
-      network: host
-      args:
-        MONGODB_URL: mongodb://0.0.0.0:27017/testdb
     restart: always
     depends_on:
       - mongo
     volumes:
       - api-build:/opt/application/api-build
     env_file: api/production.env
-    network_mode: host
 
   web:
     build:
@@ -42,9 +35,10 @@ services:
     restart: always
     depends_on:
       - web
+    ports:
+      - 80:80
     volumes:
       - web-build:/var/www/html
-    network_mode: host
 
 volumes:
   api-build:
