@@ -8,7 +8,7 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "types": [
-      "@waltz-ui/web/vue"
+      "@waltz-ui/ui/vue"
     ]
   }
 }

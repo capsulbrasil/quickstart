@@ -6,6 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "sonata-build",
+    "migrate": "sonata-build -m migrate",
     "dev": "sonata-build -w",
     "start": "node -r sonata-api/loader ./release/index.js"
   },
