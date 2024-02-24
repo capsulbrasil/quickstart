@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { DashboardLayout } from 'aeria-app-layout'
+
 const metaStore = useStore('meta')
 </script>
 
@@ -16,7 +17,8 @@ const metaStore = useStore('meta')
         @click="metaStore.$theme === 'dark'
           ? metaStore.$actions.saveTheme('default')
           : metaStore.$actions.saveTheme('dark')
-      "></aeria-icon>
+        "
+      />
     </template>
   </dashboard-layout>
 </template>

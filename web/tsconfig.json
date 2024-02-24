@@ -10,5 +10,10 @@
     "types": [
       "@waltz-ui/ui/vue"
     ]
-  }
+  },
+  "include": [
+    "../api/@types/*.d.ts",
+    "src",
+    "*.d.ts"
+  ]
 }
