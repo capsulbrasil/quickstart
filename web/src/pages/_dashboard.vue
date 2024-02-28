@@ -10,11 +10,11 @@ const metaStore = useStore('meta')
       <aeria-icon
         v-clickable
         :icon="
-          metaStore.$theme === 'dark'
+          metaStore.theme === 'dark'
             ? 'moon'
             : 'sun'
         "
-        @click="metaStore.$theme === 'dark'
+        @click="metaStore.theme === 'dark'
           ? metaStore.$actions.saveTheme('default')
           : metaStore.$actions.saveTheme('dark')
         "
