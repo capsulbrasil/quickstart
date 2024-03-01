@@ -1,1 +1,1 @@
-export * from './pt_BR'
+export * from './pt_BR.js'

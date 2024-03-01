@@ -1,7 +1,7 @@
 import { useApp, defineOptions, AeriaMain } from 'waltz-ui'
 import waltzPtbr from '@waltz-ui/i18n-ptbr'
-import { ptbr } from './i18n'
-import { routes } from './routes'
+import { ptbr } from './i18n/index.js'
+import { routes } from './routes.js'
 
 import '@waltz-ui/ui/style.css'
 import 'aeria-app-layout/style.css'

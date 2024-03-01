@@ -1,4 +1,4 @@
-export * from './pizza'
+export * from './pizza/index.js'
 
 export {
   user,

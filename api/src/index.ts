@@ -1,6 +1,6 @@
 import { init, createRouter } from 'sonata-api'
-import { pizzaRoutes } from './routes'
-export * as collections from './collections'
+import { pizzaRoutes } from './routes/index.js'
+export * as collections from './collections/index.js'
 
 export const router = createRouter()
 router.group('/pizza', pizzaRoutes)
