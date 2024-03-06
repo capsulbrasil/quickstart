@@ -8,8 +8,6 @@ import 'aeria-app-layout/style.css'
 import './style/main.css'
 import './style/main.less'
 
-import { aeria } from 'aeria-sdk'
-
 const options = defineOptions({
   component: AeriaMain,
   routes,
@@ -28,16 +26,6 @@ const options = defineOptions({
 
   ],
 })
-
-;(async () => {
-  const r = await aeria.pizza.shampoo123.POST({
-    name: 'joao',
-    type: 'dog',
-  })
-
-  r.name
-  r.age
-})()
 
 useApp(options).then((app) => {
   app.mount()
