@@ -24,4 +24,10 @@ declare global {
         : never
     : never
 }
+
+declare module 'aeria' {
+  import type { Context } from 'aeria'
+  export const useAeria: () => Promise<Context>
+  export const aeria: Context
+}
 //

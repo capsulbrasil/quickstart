@@ -7,5 +7,5 @@ export {
   log,
   resourceUsage,
 
-} from 'sonata-api'
+} from 'aeria'
 

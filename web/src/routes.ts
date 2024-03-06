@@ -1,4 +1,4 @@
-import { userRoutes, dashboardRoutes } from 'waltz-ui'
+import { userRoutes, dashboardRoutes } from 'aeria-ui'
 import DashboardLayout from './pages/_dashboard.vue'
 import { AuthWall } from 'aeria-app-layout'
 

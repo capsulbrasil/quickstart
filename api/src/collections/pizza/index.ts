@@ -1,4 +1,4 @@
-import { defineCollection, get, getAll, insert, remove } from 'sonata-api'
+import { defineCollection, get, getAll, insert, remove } from 'aeria'
 
 export const pizza = defineCollection({
   description: {
@@ -8,6 +8,9 @@ export const pizza = defineCollection({
     properties: {
       name: {
         type: 'string',
+      },
+      flavor: {
+        literal: 'cheese',
       },
       price: {
         type: 'number',

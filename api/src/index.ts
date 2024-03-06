@@ -1,4 +1,4 @@
-import { init, createRouter } from 'sonata-api'
+import { init, createRouter } from 'aeria'
 import { pizzaRoutes } from './routes/index.js'
 export * as collections from './collections/index.js'
 

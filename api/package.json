@@ -5,18 +5,27 @@
   "main": "dist/index.js",
   "types": "src/index.ts",
   "scripts": {
-    "build": "sonata-build -ci",
-    "migrate": "sonata-build -m",
-    "dev": "sonata-build -w",
-    "start": "node -r sonata-api/loader ./release/index.js"
+    "build": "aeria -ci",
+    "migrate": "aeria -m",
+    "dev": "aeria -w",
+    "start": "node -r aeria/loader ./release/index.js"
+  },
+  "aeriaSdk": {
+    "apiUrl": {
+      "development": "http://localhost:3000/api"
+    },
+    "storage": {
+      "strategy": "localStorage",
+      "namespace": "aeria"
+    }
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "sonata-api": "latest"
+    "aeria": "latest"
   },
   "devDependencies": {
-    "sonata-build": "latest"
+    "aeria-build": "latest"
   }
 }

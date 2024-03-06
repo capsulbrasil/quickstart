@@ -6,8 +6,9 @@
   },
   "icons": {
     "libraries": [
-      "@waltz-ui/ui",
+      "@aeria-ui/ui",
       "aeria-app-layout"
     ]
-  }
+  },
+  "preserveSymlinks": true
 }

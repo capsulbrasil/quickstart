@@ -1,7 +1,12 @@
 {
-    "extends": "sonata-build/config/tsconfig.json",
+    "extends": "aeria-build/config/tsconfig.json",
     "compilerOptions": {
         "outDir": "dist",
         "preserveSymlinks": true
-    }
+    },
+    "include": [
+        "src",
+        "@types/*.d.ts",
+        "sonata-api.d.ts"
+    ]
 }

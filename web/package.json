@@ -5,18 +5,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "waltz-build -m serve",
+    "dev": "aeria-ui -m serve",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
-    "build": "vue-tsc --noEmit && waltz-build -m build"
+    "build": "vue-tsc --noEmit && aeria-ui -m build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@waltz-ui/i18n-ptbr": "latest",
+    "@aeria-ui/i18n-ptbr": "latest",
     "aeria-app-layout": "latest",
-    "waltz-ui": "latest"
+    "aeria-sdk": "latest",
+    "aeria-ui": "latest"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
@@ -25,6 +26,6 @@
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.5",
     "vue-tsc": "^1.8.27",
-    "waltz-build": "latest"
+    "aeria-ui-build": "latest"
   }
 }

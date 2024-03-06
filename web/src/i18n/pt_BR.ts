@@ -1,4 +1,4 @@
-import { defineLocale } from 'waltz-ui'
+import { defineLocale } from 'aeria-ui'
 
 export const ptbr = defineLocale({
   pizza: [
