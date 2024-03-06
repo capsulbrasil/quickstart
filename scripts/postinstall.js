@@ -16,7 +16,7 @@ const main = async () => {
         path.join('web', '.aeria-ui')
       )
     } else {
-      const files = await fs.promises.readdir(aeriaUi)
+      const files = await fs.promises.readdir('.aeria-ui')
       for( const file of files ) {
         await fs.promises.rename(
           path.join('.aeria-ui', file),
