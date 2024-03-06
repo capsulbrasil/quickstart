@@ -2,31 +2,36 @@
 const fs = require('fs')
 const path = require('path')
 
-const main = async () => {
-  const aeriaUi = path.join('web', '.aeria-ui')
-  if( fs.existsSync('aeria.d.ts') ) {
-    await fs.promises.rename('aeria.d.ts',
-      path.join('api', 'aeria.d.ts'))
-  }
+/**
+ * @param {string} origin
+ * @param {string} workspace
+*/
+const moveFolder = async (origin, workspace) => {
+  const target = path.join(workspace, origin)
 
-  if( fs.existsSync('.aeria-ui') ) {
-    if( !fs.existsSync(aeriaUi) ) {
+  if( fs.existsSync(origin) ) {
+    if( !fs.existsSync(target) ) {
       await fs.promises.rename(
-        '.aeria-ui',
-        path.join('web', '.aeria-ui')
+        origin,
+        path.join(workspace, origin)
       )
     } else {
-      const files = await fs.promises.readdir('.aeria-ui')
+      const files = await fs.promises.readdir(origin)
       for( const file of files ) {
         await fs.promises.rename(
-          path.join('.aeria-ui', file),
-          path.join(aeriaUi, file),
+          path.join(origin, file),
+          path.join(target, file),
         )
       }
 
-      await fs.promises.rmdir('.aeria-ui')
+      await fs.promises.rmdir(origin)
     }
   }
+}
+
+const main = async () => {
+  await moveFolder('.aeria', 'api')
+  await moveFolder('.aeria-ui', 'web')
 }
 
 main()

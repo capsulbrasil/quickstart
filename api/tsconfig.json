@@ -5,8 +5,8 @@
         "preserveSymlinks": true
     },
     "include": [
-        "src",
         "@types/*.d.ts",
-        "sonata-api.d.ts"
+        ".aeria/aeria.d.ts",
+        "src"
     ]
 }
