@@ -1,0 +1,14 @@
+{
+  "site": {
+    "title": "Quickstart",
+    "signinText": "Área restrita",
+    "signupForm": true
+  },
+  "icons": {
+    "libraries": [
+      "@aeria-ui/ui",
+      "aeria-app-layout"
+    ]
+  },
+  "preserveSymlinks": true
+}
