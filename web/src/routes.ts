@@ -1,8 +1,9 @@
 import { userRoutes, dashboardRoutes } from 'aeria-ui'
 import DashboardLayout from './pages/_dashboard.vue'
 import { AuthWall } from 'aeria-app-layout'
+import { routes as autoRoutes } from 'vue-router/auto-routes'
 
-export const routes = [
+export const routes = autoRoutes.concat([
   userRoutes(AuthWall),
   dashboardRoutes(DashboardLayout, [
     {
@@ -14,9 +15,5 @@ export const routes = [
       },
     },
   ]),
-  {
-    path: '/',
-    component: () => import('./pages/index.vue'),
-  },
-]
+])
 

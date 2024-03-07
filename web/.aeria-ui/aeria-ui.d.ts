@@ -44,5 +44,17 @@ declare module '@vue/runtime-core' {
   }
 }
 
+import type { RouteRecordRaw } from 'vue-router'
+import type { Icon } from '@aeriajs/types'
+
+declare global {
+  const definePage: (page: Partial<RouteRecordRaw> & {
+    meta: {
+      title: string
+      icon?: Icon
+    }
+  }) => void
+}
+
 export {}
 //
