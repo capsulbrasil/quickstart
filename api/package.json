@@ -5,8 +5,8 @@
   "main": "dist/index.js",
   "types": "src/index.ts",
   "scripts": {
-    "build": "aeria -ci",
-    "migrate": "aeria -m",
+    "build": "aeria -c",
+    "build:post": "aeria -mi",
     "dev": "aeria -w",
     "start": "node -r aeria/loader ./release/index.js"
   },

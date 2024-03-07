@@ -6,7 +6,7 @@ COPY . .
 RUN npm install
 RUN npm run build
 
-CMD npm run migrate \
+CMD npm run build:post \
   && rm -rf ../api-build/node_modules \
   && cp -r node_modules ../api-build \
   && npm start
