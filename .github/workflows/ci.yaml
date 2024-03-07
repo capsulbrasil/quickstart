@@ -19,4 +19,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build packages
-        run: npm --workspaces run build
+        run: |
+          npm --workspace=api run build
+          npm --workspace=api run build:icons
+          npm --workspace=web run build
