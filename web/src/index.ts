@@ -21,9 +21,9 @@ const options = defineOptions({
     },
   },
   menuSchema: [
+    '/dashboard/',
     '/dashboard/pizza',
     '/dashboard/user',
-
   ],
 })
 

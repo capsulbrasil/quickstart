@@ -16,7 +16,6 @@
   "dependencies": {
     "@aeria-ui/i18n-ptbr": "latest",
     "aeria-app-layout": "latest",
-    "aeria-sdk": "latest",
     "aeria-ui": "latest"
   },
   "devDependencies": {

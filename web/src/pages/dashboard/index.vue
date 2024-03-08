@@ -1,18 +1,12 @@
 <script setup lang="ts">
-const teste = await aeria.pizza.shampoo123.POST({
-  name: 'cu',
-  type: 'dog',
+definePage({
+  meta: {
+    title: 'Dashboard',
+    icon: 'gauge'
+  }
 })
 </script>
 
 <template>
-  <ul>
-    <li
-      v-for="item in teste"
-      :key="item.name"
-    >
-      {{ item.name }}
-    </li>
-  </ul>
-  <h1>Seja bem-vindo</h1>
+  <h1>Welcome</h1>
 </template>
